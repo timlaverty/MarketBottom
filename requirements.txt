@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Tim Laverty
+# SPDX-License-Identifier: MIT
+
+yfinance
+pandas
+numpy
+requests
+matplotlib

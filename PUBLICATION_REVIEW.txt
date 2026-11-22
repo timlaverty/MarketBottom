@@ -1,0 +1,111 @@
+SPDX-FileCopyrightText: 2026 Tim Laverty
+SPDX-License-Identifier: MIT
+
+Publication review - 2026-11-22
+Target: https://github.com/timlaverty/MarketBottom
+
+RESULT
+
+Publish the reviewed source and documentation, subject to the original
+source-ownership assumption below. Do not upload the entire working folder.
+Downloaded data, generated reports, and the local Python environment have
+not been cleared for publication or relicensing.
+
+SCOPE AND METHOD
+
+The initial project contained 43 files outside .venv/ and __pycache__/:
+Python source/tests, README, ignore rules, dependency manifests, downloaded
+JSON/CSV/HTML, and generated CSV/JSON/text/PNG reports. Checks included text
+scans for credentials, private keys, email addresses, local paths, identifying
+names, and account-related fields; code/document inspection; CSV schema
+inspection; Yahoo JSON string fields; and both PNG metadata records.
+Local environment configuration and activation paths were checked separately.
+Installed third-party package contents were not audited as project source.
+
+The target was public and its root contained only an MIT LICENSE when checked.
+The local folder had no .git directory, so deleted files, branches, and local
+commit history could not be reviewed. This is a review of the current working
+files, not a guarantee about material outside them or a complete provenance audit.
+
+PERSONAL INFORMATION
+
+No credentials, private keys, personal email addresses, account numbers,
+brokerage holdings, or private financial records were identified in the
+reviewed project files. Credential-pattern hits in the saved FRED HTML were
+ordinary cookie-handling JavaScript, not stored authentication values.
+The CSVs contain market observations and model calculations. The PNG metadata
+contains Matplotlib/version and image-resolution details, with no EXIF location
+or author information found.
+
+Low-risk context remains: run_market_bottom.py explicitly uses Europe/Berlin
+for report timestamps. Source comments and dependency versions expose some
+development/environment details. The MIT notices intentionally identify Tim
+Laverty, matching the already-public target license. Earlier-chat references
+were removed from the public README and the runner's report explanation.
+
+The local .venv/ configuration and activation scripts contain workstation
+paths. Python bytecode can also retain source paths. Exclude .venv/ and
+__pycache__/ in full. Local generated snapshots retain run timestamps and
+the earlier report wording, but are excluded along with all outputs/.
+
+DATA RIGHTS
+
+The ICE/FRED series notes explicitly require prior written permission for
+reproduction and distribution of the covered index data. The local
+credit_spread*.csv copies and saved HTML are unsuitable for this public upload
+without that permission. Yahoo downloads also have provider rights; this
+project contains no grant allowing their redistribution under MIT. Generated
+reports include provider values or derived calculations. Excluding all of
+data/ and outputs/ avoids treating these materials as cleared public content.
+See THIRD_PARTY_NOTICES.txt for source links and license boundaries.
+
+CODE LICENSE AND PROVENANCE
+
+LICENSE matches the existing target repository's MIT license. Each public
+project text file has an SPDX MIT identifier, except LICENSE itself, which is
+the full license text. License comments were also added to the reference copy;
+its executable code is preserved. Installed dependency licenses and provider
+rights have not been changed.
+
+No conflicting copyright or license notice was found in the original project
+source. The original model arrived without independent provenance evidence.
+Applying MIT follows the owner's instruction and assumes authority to license
+that source; absence of a notice alone does not establish ownership. If any
+source was copied from another author or an employer, resolve those rights
+and preserve required notices before publishing it.
+
+REVIEWED PUBLIC FILE SET
+
+.gitignore
+LICENSE
+README.md
+PUBLICATION_REVIEW.txt
+THIRD_PARTY_NOTICES.txt
+requirements.txt
+requirements-lock.txt
+market_bottom_backtest.py
+run_market_bottom.py
+test_market_bottom.py
+reference/market_bottom_backtest.original.py
+
+UPLOAD HANDLING
+
+The local publish/MarketBottom-source.zip contains only the eleven files above.
+Extract it and upload its contents rather than selecting the working folder.
+.gitignore is also configured to exclude data/, outputs/, environments, caches,
+local secrets, and publish/. Ignore rules do not protect manual browser uploads,
+forced additions, or files already tracked in another checkout. Re-review any
+subsequent additions. Future Git commits can expose the configured author email;
+check that setting or use a GitHub-provided noreply address when committing.
+
+No files were uploaded and no GitHub repository changes were made by this review.
+
+VERIFICATION
+
+All five existing unit tests passed using synthetic market inputs. Public
+Python files parsed successfully. All eleven public files passed the final
+credential/email/workstation-path checks and license-identifier checks.
+The local LICENSE exactly matches the existing GitHub license blob. The
+source archive's membership and bytes were checked against the public file
+set; data, outputs, environments, and caches are absent. Ignore rules also
+cover the standard generated filenames when written outside data/ or outputs/.

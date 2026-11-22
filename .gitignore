@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2026 Tim Laverty
+# SPDX-License-Identifier: MIT
+
+# Local Python environments and caches (including embedded workstation paths).
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Downloaded provider data and generated reports are not cleared for publication.
+/data/
+/outputs/
+
+# The original model defaults to the working directory; custom output/data
+# directories can also place these generated files outside the folders above.
+daily_scores.csv
+signals.csv
+score_summary.csv
+cycle_bottoms.csv
+benchmark_daily.csv
+market_bottom_chart.png
+latest_snapshot.json
+today_calculation.csv
+today_report.txt
+prices.csv
+*_yahoo.json
+credit_spread*.csv
+credit_spread_table.txt
+
+# Locally prepared upload artifacts.
+/publish/
+
+# Local credentials and machine-specific settings.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

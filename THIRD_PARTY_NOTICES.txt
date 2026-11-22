@@ -1,0 +1,38 @@
+SPDX-FileCopyrightText: 2026 Tim Laverty
+SPDX-License-Identifier: MIT
+
+The MIT identifiers above cover this notice document itself.
+
+LICENSE SCOPE
+
+The root LICENSE covers project-owned Python source (including reference/),
+tests, documentation, and configuration. The copyright year and holder match
+the existing LICENSE in timlaverty/MarketBottom. A project license cannot grant
+rights in material owned by data providers or dependency authors.
+
+LOCAL DATA AND REPORTS - EXCLUDED FROM PUBLIC DISTRIBUTION
+
+data/credit_spread*.csv and data/credit_spread_table.txt contain material from
+the ICE BofA US High Yield Index Option-Adjusted Spread series, via FRED.
+The series notes require prior written permission for reproduction and
+third-party distribution of the covered data:
+https://fred.stlouisfed.org/series/BAMLH0A0HYM2
+
+data/*_yahoo.json and data/prices.csv contain Yahoo Finance/provider market
+data. No permission to redistribute or relicense these downloads was found
+in this project. Relevant provider information and terms:
+https://help.yahoo.com/kb/SLN2310.html
+https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html
+
+All of data/ and outputs/ are excluded. Reports, CSVs, charts, and snapshots
+may reproduce provider values or calculations using them; publishing derived
+results requires its own assessment. MIT notices on the program do not clear
+data or reports for redistribution. Obtain and use inputs under applicable
+provider terms.
+
+DEPENDENCIES - SEPARATE LICENSES
+
+requirements.txt and requirements-lock.txt are MIT-licensed project manifests.
+They list third-party packages; they do not relicense those packages. Packages
+installed in .venv/ retain their own licenses, notices, and restrictions.
+No installed dependencies are included in the reviewed public source archive.
